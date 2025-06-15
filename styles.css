@@ -1,20 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
-.header {
+.headerPanel {
     background-color: purple;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50vw;
     border-left: 10px purple solid;
     border-right: 10px purple solid;
+    flex-wrap: wrap;
 }
 .container {
     border: 10px purple solid;
     width: 50vw;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
 }
@@ -24,14 +31,44 @@ body {
 }
 .gridBoxes {
     flex: 1;
-    background-color: black;
-    opacity: 0;
+    background-color: white;
+    opacity: 0.9;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
 }
 h1{
     margin: 0px auto;
     color: greenyellow;
 }
 button {
-    padding: 0px 20px;
-    margin-top: 10px;
+    padding: 5px 20px;
+    margin-left: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+select {
+    margin-top: 1px;
+    padding: 5px 0px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+label {
+    margin-left: 4px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+input {
+    margin-top: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1px;
+}
+.transparent {
+    font-size: small;
 }

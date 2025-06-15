@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
+    <title>Etch-an-SVG</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Etch-a-sketch by Jerin</h1>
+    <main>
+    <div class="headerPanel">
+        <h1>Etch-an-SVG</h1>
+        <label>Resolution:
+            <select>
+                <option value="8" selected>Small (8x8 pixels)</option>
+                <option value="16">Low res (16x16 pixels)</option>
+                <option value="32">Regular (32x32 pixels)</option>
+                <option value="48">High res (48x48 pixels)</option>
+                <option value="64">Large (64x64 pixels)</option>
+            </select>
+        </label>
+        <label>Color:
+            <input type="color" value="#000000">
+        </label>
         <button>Reset</button>
     </div>
     <div class="container"></div>
+    </main>
 </body>
 </html>
