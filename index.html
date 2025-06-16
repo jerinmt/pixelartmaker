@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-an-SVG</title>
+    <title>SVG Pixel Art</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
+    <h1>SVG Pixel Art</h1>
     <div class="headerPanel">
-        <h1>Etch-an-SVG</h1>
         <label>Resolution:
-            <select>
+            <select name="resolutions">
                 <option value="8" selected>Small (8x8 pixels)</option>
                 <option value="16">Low res (16x16 pixels)</option>
                 <option value="32">Regular (32x32 pixels)</option>
@@ -23,9 +22,18 @@
         <label>Color:
             <input type="color" value="#000000">
         </label>
-        <button>Reset</button>
+        <button type="button" class="resetButton">Reset</button>
+        <button type="button" class="downloadButton">Download</button>
+        <button type="button" class="donateButton">Donate</button>
     </div>
     <div class="container"></div>
-    </main>
+    <dialog>
+        Let's combine pixel art with SVG!<br><br>
+        Pixel art and SVG are never said in the same sentence, but what if you can create pixel art in SVG format. It can scale and still maintain the pixelated aesthetic.<br><br>
+        Use this tool to create the pixel art in common pixel art resolutions (8x8, 16x16, 32x32, 48x48 & 64x64). Click the download button afterwards to instantly download the SVG format. There is no backend, it is a complete static webapp which is very lightweight too. None of your creations leave your device.<br><br>
+        Select the color and click on the cells to draw. Clicking again cycles through 3 levels of transparency. Click and draw option is also available to create strokes(Better to zoom in higher resolutions). The black circle in white background denotes transparent cell. Right click to make a cell transparent(Clear a cell first to change its color). Click on reset button to clear completely.<br><br>
+        The tool is free, but you can support me by clicking on the donate button to donate. I like making simple web app tools and web games.<br><br>
+        <button type="button" class="OKButton">OK</button>
+    </dialog>
 </body>
 </html>

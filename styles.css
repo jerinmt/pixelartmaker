@@ -1,26 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+    max-width: 600px;
+    margin: auto; 
 }
 .headerPanel {
     background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
-    border-left: 10px purple solid;
-    border-right: 10px purple solid;
+    width: 100%;
     flex-wrap: wrap;
 }
 .container {
     border: 10px purple solid;
-    width: 50vw;
+    width: 100%;
     height: 85vh;
     display: flex;
     flex-direction: column;
@@ -31,9 +28,8 @@ body {
 }
 .gridBoxes {
     flex: 1;
-    background-color: white;
+    background-image: radial-gradient(black, white);
     opacity: 0.9;
-    color: black;
     font-weight: 900;
     text-align: center;
     align-content: center;
@@ -42,6 +38,9 @@ body {
 h1{
     margin: 0px auto;
     color: greenyellow;
+    background-color: purple;
+    width: 100%;
+    text-align: center;
 }
 button {
     padding: 5px 20px;
@@ -71,4 +70,16 @@ input {
 }
 .transparent {
     font-size: small;
+}
+dialog {
+    margin: auto;
+    width: 400px;
+    color: black;
+    background-color: white;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
 }
