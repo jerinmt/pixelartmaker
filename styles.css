@@ -71,15 +71,3 @@ input {
 .transparent {
     font-size: small;
 }
-dialog {
-    margin: auto;
-    width: 400px;
-    color: black;
-    background-color: white;
-    border-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    border-radius: 8px;
-}

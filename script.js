@@ -75,11 +75,6 @@ function removeGrid() {
     }
 }
 
-document.querySelector("dialog").showModal();
-document.querySelector(".OKButton").addEventListener('click', () => {
-    document.querySelector("dialog").close();
-}, false);
-
 function downloadFile(content, filename, contentType) {
     const blob = new Blob([content], { type: contentType });
     const url = URL.createObjectURL(blob);
@@ -94,7 +89,6 @@ function downloadFile(content, filename, contentType) {
 
 document.querySelector(".downloadButton").addEventListener('click', () => {
     let fileContent = `<svg width = "${size}" height = "${size}" xmlns = "http://www.w3.org/2000/svg">`;
-    //write the pixels
     const grid = document.querySelectorAll('.gridBoxes');
     let start, end, currentColor, currentOpacity;
     for(let i=0; i < size; i++) {
@@ -122,4 +116,9 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
 
 document.querySelector(".donateButton").addEventListener('click', () => {
     console.log("Donating money");
+});
+
+document.querySelector("dialog").showModal();
+document.querySelector(".OKButton").addEventListener('click', () => {
+    document.querySelector("dialog").close();
 });
