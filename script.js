@@ -98,7 +98,7 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
                 currentColor = grid[k].style.backgroundColor;
                 currentOpacity = grid[k].style.opacity;
                 start = j;
-                while (currentOpacity == grid[i * size + j + 1].style.opacity && 
+                while ((k != size * size - 1) && currentOpacity == grid[i * size + j + 1].style.opacity && 
                     currentColor == grid[i * size + j + 1].style.backgroundColor && (j != (size - 1))) {
                     j += 1;
                     k += 1;
@@ -109,7 +109,6 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
         }
     }
     fileContent += '</svg>';
-    console.log(fileContent);
     const fileName = "PicArt.svg";
     downloadFile(fileContent, fileName, "text/plain");
 });
