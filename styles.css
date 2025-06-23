@@ -79,7 +79,6 @@ input {
     flex-direction: column;
     border-radius: 8px;
     width: 98vw;
-    margin-top: 10px;
 }
 .OKButton {
     align-self: center;
