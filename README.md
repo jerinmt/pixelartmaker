@@ -1,7 +1,7 @@
 # pixelartmaker
 A webapp that can create pixel art in SVG format
 
-Hosted on: 
+Hosted on: https://jerinmt.github.io/pixelartmaker/
 
 Let's combine pixel art with SVG!
 
