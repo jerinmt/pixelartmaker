@@ -11,4 +11,4 @@ Use this tool to create the pixel art in common pixel art resolutions (8x8, 16x1
 
 Select the color and click on the cells to draw. Clicking again cycles through 3 levels of transparency. Click and draw option is also available to create strokes(Better to zoom in higher resolutions). The black circle in white background denotes transparent cell. Right click to make a cell transparent(Clear a cell first to change its color). Click on reset button to clear completely.
 
-The tool is free, but you can support me by clicking on the donate button to donate. I would really appreciate the encouragement.
+The tool is free, but you can support me by sharing the app.
