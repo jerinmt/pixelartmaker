@@ -88,7 +88,7 @@ function downloadFile(content, filename, contentType) {
 }
 
 document.querySelector(".downloadButton").addEventListener('click', () => {
-    let fileContent = `<svg width = "${size}" height = "${size-1}" xmlns = "http://www.w3.org/2000/svg">`;
+    let fileContent = `<svg width = "${size}" height = "${size}" xmlns = "http://www.w3.org/2000/svg">`;
     const grid = document.querySelectorAll('.gridBoxes');
     let start, end, currentColor, currentOpacity;
     for(let i=0; i < size; i++) {
