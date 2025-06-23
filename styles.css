@@ -8,17 +8,18 @@ body {
     margin: auto; 
 }
 .headerPanel {
-    background-color: purple;
+    background-color: chocolate;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    gap: 5px;
 }
 .container {
-    border: 10px purple solid;
+    border: 10px chocolate solid;
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
 }
@@ -30,15 +31,12 @@ body {
     flex: 1;
     background-image: radial-gradient(black, white);
     opacity: 0.9;
-    font-weight: 900;
-    text-align: center;
-    align-content: center;
     cursor: pointer;
 }
 h1{
     margin: 0px auto;
     color: greenyellow;
-    background-color: purple;
+    background-color: chocolate;
     width: 100%;
     text-align: center;
 }
@@ -68,6 +66,20 @@ input {
     cursor: pointer;
     padding: 1px;
 }
-.transparent {
-    font-size: small;
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blanchedalmond;
+    color: brown;
+    border: 5px solid darkred;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.OKButton {
+    align-self: center;
+    padding: 10px 25px;
 }

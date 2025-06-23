@@ -1,7 +1,7 @@
 let container = document.querySelector(".container");
 const divRow = [];
 const divSquare = [];
-let size=8;
+let size = 16;
 let color = '#000000';
 
 function drawline(Event) {
@@ -25,9 +25,9 @@ function createGrid() {
                     x = 0.6;
                 }
                 else if (x==0.6){
-                    x = 0.2;
+                    x = 0.4;
                 } 
-                else if (x==0.2) {
+                else if (x==0.4) {
                     x = 1;
                 }
                 else {
@@ -88,7 +88,7 @@ function downloadFile(content, filename, contentType) {
 }
 
 document.querySelector(".downloadButton").addEventListener('click', () => {
-    let fileContent = `<svg width = "${size}" height = "${size}" xmlns = "http://www.w3.org/2000/svg">`;
+    let fileContent = `<svg width = "${size}" height = "${size-1}" xmlns = "http://www.w3.org/2000/svg">`;
     const grid = document.querySelectorAll('.gridBoxes');
     let start, end, currentColor, currentOpacity;
     for(let i=0; i < size; i++) {
@@ -113,11 +113,6 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
     downloadFile(fileContent, fileName, "text/plain");
 });
 
-document.querySelector(".donateButton").addEventListener('click', () => {
-    console.log("Donating money");
-});
-
-document.querySelector("dialog").showModal();
 document.querySelector(".OKButton").addEventListener('click', () => {
-    document.querySelector("dialog").close();
+    document.querySelector(".intro").style.display = 'none';
 });
