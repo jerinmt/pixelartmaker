@@ -11,7 +11,7 @@
     <h1>SVG Pixel Art</h1>
     <div class="headerPanel">
         <label>Resolution:
-            <select name="resolutions">
+            <select id="resolutions" name="resolutions">
                 <option value="16" selected>Simple (16x16 pixels)</option>
                 <option value="8">Small (8x8 pixels)</option>
                 <option value="32">Regular size (32x32 pixels)</option>
@@ -22,8 +22,15 @@
         <label>Color:
             <input type="color" value="#000000">
         </label>
-        <button type="button" class="resetButton">Reset</button>
+        <label>File format:
+            <select id="formats" name="formats">
+                <option value="svg" selected>SVG</option>
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+            </select>
+        </label>
         <button type="button" class="downloadButton">Download</button>
+        <button type="button" class="resetButton">Reset</button>
     </div>
     <div class="container"></div>
     <div class="intro">

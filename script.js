@@ -54,13 +54,7 @@ function createGrid() {
 createGrid();
 function setResolution () {
     removeGrid();
-    size = document.querySelector('select').value-0;
-    if(size<0) {
-        size = 1;
-    }
-    if(size>100) {
-        size = 100;
-    }
+    size = document.querySelector('#resolutions').value-0;
     createGrid();
 }
 document.querySelector(".resetButton").addEventListener('click', setResolution);
@@ -75,16 +69,58 @@ function removeGrid() {
     }
 }
 
-function downloadFile(content, filename, contentType) {
-    const blob = new Blob([content], { type: contentType });
+function downloadSVG(content) {
+    const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = filename;
+    link.download = 'PicArt.svg';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+}
+
+function downloadJPG(svgCode) {
+    const svgBlob = new Blob([svgCode], { type: 'image/svg+xml;charset=utf-8' });
+    const img = new Image();
+    img.src = URL.createObjectURL(svgBlob);
+    img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        const jpgDataUrl = canvas.toDataURL('image/jpeg', 1);
+        const a = document.createElement('a');
+        a.href = jpgDataUrl;
+        a.download = 'PicArt.jpg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(img.src);
+    };
+}
+
+function downloadPNG(svgCode) {
+    const svgBlob = new Blob([svgCode], { type: 'image/svg+xml;charset=utf-8' });
+    const img = new Image();
+    img.src = URL.createObjectURL(svgBlob);
+    img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        const jpgDataUrl = canvas.toDataURL('image/png');
+        const a = document.createElement('a');
+        a.href = jpgDataUrl;
+        a.download = 'PicArt.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(img.src);
+    };
 }
 
 document.querySelector(".downloadButton").addEventListener('click', () => {
@@ -109,8 +145,18 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
         }
     }
     fileContent += '</svg>';
-    const fileName = "PicArt.svg";
-    downloadFile(fileContent, fileName, "text/plain");
+    let format = document.querySelector('#formats').value;
+    switch(format) {
+        case 'svg':
+            downloadSVG(fileContent);
+            break;
+        case 'jpg':
+            downloadJPG(fileContent);
+            break;
+        case 'png':
+            downloadPNG(fileContent);
+            break;
+    }
 });
 
 document.querySelector(".OKButton").addEventListener('click', () => {
