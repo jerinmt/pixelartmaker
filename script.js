@@ -151,7 +151,7 @@ document.querySelector(".downloadButton").addEventListener('click', () => {
             downloadSVG(fileContent);
             break;
         case 'jpg':
-            downloadJPGPNG(fileContent);
+            downloadJPG(fileContent);
             break;
         case 'png':
             downloadPNG(fileContent);
