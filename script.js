@@ -112,7 +112,7 @@ function downloadPNG(svgCode) {
         canvas.height = img.height;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
-        const jpgDataUrl = canvas.toDataURL('image/png');
+        const jpgDataUrl = canvas.toDataURL('image/png', 1);
         const a = document.createElement('a');
         a.href = jpgDataUrl;
         a.download = 'PicArt.png';
